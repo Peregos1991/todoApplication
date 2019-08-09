@@ -1,0 +1,26 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+
+    .leftSection {
+        width: 500px;
+
+        .DisplayTodoItemSection {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .TodoItemFilterSection {
+            margin-bottom: 20px;
+
+            label {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .rightSection {
+        width: 800px;
+    }
+}

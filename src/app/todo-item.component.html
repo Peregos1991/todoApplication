@@ -1,0 +1,14 @@
+<div class="todoItemCard" [class.selected]="selected" (click)="onItemClick()">
+    <div>
+        <div>
+            {{element.Title}}
+        </div>
+        <div>
+            Date: {{element.Date | date: 'y, MMM d, HH:mm'}}
+        </div>
+        <div>
+            Location: {{element.Location}}
+        </div>
+    </div>
+    <div class="close" (click)="onCloseClick()">&times;</div>
+</div>

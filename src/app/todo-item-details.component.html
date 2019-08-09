@@ -1,0 +1,26 @@
+<form
+    [formGroup]="detailform"
+    (ngSubmit)="onContentChange(detailform.value)"
+    class="todoItemDetails">
+    <header>
+        <h2>{{element.Title}}</h2>
+    </header>
+    <div>
+        <label for="itemDate">Date</label>
+        <input type="datetime-local" name="itemDate" id="itemDate" formControlName="date">
+    </div>
+    <div>
+        <label for="itemLocation">Location</label>
+        <input type="text" name="itemLocation" id="itemLocation" formControlName="location">
+    </div>
+    <div>
+        <label for="itemDescription">Description</label>
+        <textarea rows="5" cols="50" name="itemDescription" id="itemDescription" formControlName="description"></textarea>
+    </div>
+    <div>
+        <button type="submit">Change</button>
+    </div>
+    <div>
+        <iframe id="iframe" [src]="element.MapUrl | safe" width="800" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+</form>

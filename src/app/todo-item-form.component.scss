@@ -1,0 +1,21 @@
+.createTodoItemForm {
+    margin-bottom: 20px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            margin-bottom: 5px;
+
+            label {
+                width: 70px;
+            }
+
+            input {
+                width: 210px;
+            }
+        }
+    }
+}

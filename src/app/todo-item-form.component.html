@@ -1,0 +1,27 @@
+<header>
+  <h2>Create new todo item</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)"
+  class="createTodoItemForm">
+  <section>
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" formControlName="title">
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location" formControlName="location">
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="datetime-local" name="date" id="date" formControlName="date">
+    </div>
+    <div>
+      <label for="description">Details:</label>
+      <textarea rows="5" cols="50" name="description" id="description" formControlName="description"></textarea>
+    </div>
+  </section>
+  <button type="submit">Save</button>
+</form>

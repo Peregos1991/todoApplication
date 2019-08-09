@@ -1,0 +1,19 @@
+.todoItemDetails {
+    div {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            margin-top: 5px;
+        }
+
+        button {
+            align-self: baseline;
+        }
+    }
+}

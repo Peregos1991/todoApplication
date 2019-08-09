@@ -1,0 +1,21 @@
+<div class="mainContainer">
+    <section class="leftSection">
+        <section class="TodoItemFormSection">
+            <todo-item-form (create)="onCreate($event)"></todo-item-form>
+        </section>
+        <section class="TodoItemFilterSection">
+            <label>Filter:</label>
+            <input type="text" id="filterInput" (input)="filterChanged($event.target.value)" placeholder="Filter">
+        </section>
+        <section class="DisplayTodoItemSection">
+            <todo-item *ngFor="let todoItem of filteredTodoItems"
+                [element]="todoItem"
+                [selected]="todoItem.Id === selectedItem.Id"
+                (select)="onSelection($event)"
+                (close)="onClose($event)"></todo-item>
+        </section>
+    </section>
+    <section class="rightSection" *ngIf="selectedItem.Id !== ''">
+        <todo-item-details [element]="selectedItem" (edit)="onEdit($event)"></todo-item-details>
+    </section>
+</div>
